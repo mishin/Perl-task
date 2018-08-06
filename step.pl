@@ -16,10 +16,9 @@ $ua = LWP::UserAgent->new;
 $html = $ua->get($url);
 
 # Grab img from HTML code
-my $img = "";
-
-#########
-die "<img> not found\n" if (!$img);
-
+$html->decoded_content =~ m/<img src="/;
+$after = "$'\n";
+$after =~ m/"/;
+$imgAdress = "$`\n";
 
 1;
