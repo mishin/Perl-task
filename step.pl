@@ -1,6 +1,6 @@
 #!/usr/bin/perl -X
 require HTTP::Request;
-use Image::OCR::Tesseract 'get_ocr';
+use Image::OCR::Tesseract 'convert_8bpp_tif';
 use LWP::UserAgent ();
 
 ##########
