@@ -1,5 +1,6 @@
 #!/usr/bin/perl -X
 require HTTP::Request;
+use Image::OCR::Tesseract 'get_ocr';
 use LWP::UserAgent ();
 
 ##########
@@ -22,5 +23,8 @@ $after =~ m/"/;
 $imgPath = "$`\n";
 #########
 $imgUrl = "$home$imgPath";
+$image = $ua->get($imgUrl);
+#$code = convert_8bpp_tif($image->);
+$code = convert_8bpp_tif($image->decoded_content);
 
 1;
