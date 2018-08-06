@@ -24,7 +24,7 @@ $imgPath = "$`\n";
 #########
 $imgUrl = "$home$imgPath";
 $image = $ua->get($imgUrl);
-#$code = convert_8bpp_tif($image->);
+#$code = convert_8bpp_tif($image);
 $code = convert_8bpp_tif($image->decoded_content);
 
 1;
